@@ -1,0 +1,221 @@
+body{
+    padding: 0;
+    background-image: url("/images/background.jpg");
+    font-family: "Roboto";
+    background-size: cover;
+    /* background-position-y: -100px; */
+    background-repeat: no-repeat;
+}
+
+.filesList{
+    background: rgba(0, 0, 0, .2);
+    position: absolute;
+    right: 4em;
+    top: 4em;
+    color: #fff;
+    padding: 20px;
+}
+.dropzone{
+    height: 200px;
+    transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.dropzone:hover{
+    cursor: pointer;
+}
+.dropzone:hover .fa-plus{
+    background: #0073e5;
+}
+.dropzone:focus{
+    outline: none;
+}
+.formUpload{
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    width: 300px;
+    border-radius: 10px;
+}
+.acceptDrag{
+    color: #fff;
+    background: rgba(64,159,255,0.8);
+}
+.onDrop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(64,159,255,0.2);
+    width: 100%;
+    height: 100%;
+    border-radius: .2em;
+    transition: all .2s;
+    border: 2px #6a6d70 dashed;
+    padding: 0 20px;
+}
+.formUpload input:focus{
+    border: 0;
+    outline: none;
+    border-bottom: 1px #d4d7d9 solid;
+}
+.formGroup{
+    margin-top: 1em;
+    position: relative;
+    height: 47px;
+}
+.formGroup label{
+    position: absolute;
+    top: 1.4em;
+    transition: all .2s;
+    font-size: 0.875em;
+    color: #6a6d70;
+}
+.formUpload input{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 0 8% 0 0.71429em;
+    border: none;
+    border-bottom: 1px #d4d7d9 solid;
+    font-size: 0.875em;
+    font-size: 1em;
+}
+label.focus{
+    top: -0.7em;
+}
+label.hide{
+    opacity: 0;
+}
+.formUpload button{
+    margin-top: 1em;
+    width: 100%;
+    border: none;
+    margin-top: 2em;
+    background: #babcbf;
+    padding: 10px;
+    font-size: 1em;
+    transition: all .2s;
+    color: #fff;
+    border-radius: .2em;
+}
+.formUpload button.ready{
+    background: #409fff;
+}
+.formUpload button.ready:hover{
+    background: #0073e5;
+    cursor: pointer;
+}
+.addFile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addFile .fa-plus{
+    background: #409fff;
+    border-radius: 50%;
+    color: #fff;
+    padding: 10px;
+    transition: all .2s;
+}
+.addFile h2{
+    font-size: 1.375em;
+    margin-left: 1em;
+}
+.uploadDefault .successUpload{
+    display: none;
+}
+.uploadSuccess .successUpload{
+    display: flex;
+}
+.uploadSucess .formGroup,
+.uploadSucess .dropzone,
+.uploadSucess .formButton{
+    opacity: 0;
+}
+.stateUpload .success{
+    display: none;
+}
+.uploadSucess .success{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    transition: all .4s;
+}
+.uploadSucess .success i{
+    background: #2ecc71;
+    color: #fff;
+    padding: 1em;
+    border-radius: 50%;
+}
+.load{
+    display: none;
+}
+.loading .load{
+    display: flex;
+}
+.load{
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,.8);
+    border-radius: 10px;
+}
+.rejectStyle{
+    background-color: #e74c3c;
+    color: #fff;
+}
+.rejectStyle .addFile .fa-plus{
+    background-color: #fff;
+    color: #e74c3c;
+}
+.uploadList-appear {
+    opacity: 0.01;
+}
+.uploadList-appear.uploadList-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+.uploadList-enter {
+    opacity: 0.01;
+  }
+  .uploadList-enter.uploadList-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  .uploadList-leave {
+    opacity: 1;
+  }
+  .uploadList-leave.uploadList-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+
+@media screen and (max-width: 1500px){
+    body{
+        background-size:  auto 100vh;
+    }
+}
+@media screen and (max-width: 800px){
+    .filesList{
+        position: relative;
+        right: 10px;
+        left: 10px;
+        top: 10px;
+        max-width: 80%;
+    }
+}
